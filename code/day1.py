@@ -1,8 +1,7 @@
 # aoc 2021 day 1 part 1
 
 # read input, cast to int
-depths = open('../input/day1.txt').read().splitlines()
-depths = [int(x) for x in depths]
+depths = list(map(int, open('../input/day1.txt').read().splitlines()))
 
 # print outcome
 print(sum([y > x for x, y in zip(depths[:-1], depths[1:])]))
