@@ -22,7 +22,6 @@ def get_life_support(entries, i, oxygen=True):
         oxygen = entries[0].clip(min=0, max=1)
         return int(''.join(str(x) for x in oxygen), base=2)  # transform the entry to base 2 and then base 10
     # get most/least common bit
-    bit = 0
     if oxygen:
         bit = 1 if np.sum(entries[:, i]) >= 0 else -1
     else:

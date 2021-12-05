@@ -26,7 +26,7 @@ def calculate_turns_score(board, num_list, marks=None, i=0):
     return calculate_turns_score(board, num_list, marks, i+1)  # continue playing with next number
 
 
-# calculate win number for each board and sort by number of turns needed
+# calculate turns needed and score for each board and sort by number of turns needed
 win_numbers_scores = sorted(map(lambda x: calculate_turns_score(x, nums), boards), key=lambda x: x[0])
 # get score of board that needs the least turns
 print(win_numbers_scores[0][1])
