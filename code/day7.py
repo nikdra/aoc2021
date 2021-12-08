@@ -14,8 +14,9 @@ print(sum(np.abs(positions-int(np.median(positions)))))
 # sum of natural numbers = n*(n+1)/2
 # in our case: abs(pos-average) * (abs(pos-average) + 1) / 2
 # numpy can do this in one go for all pos in positions
-fl = int(sum(abs(positions - np.floor(np.average(positions)))*(abs(positions - np.floor(np.average(positions)))+1)/2))
-cl = int(sum(abs(positions - np.ceil(np.average(positions)))*(abs(positions - np.ceil(np.average(positions)))+1)/2))
+ave = np.average(positions)
+fl = int(sum(abs(positions - np.floor(ave))*(abs(positions - np.floor(ave))+1)/2))
+cl = int(sum(abs(positions - np.ceil(ave))*(abs(positions - np.ceil(ave))+1)/2))
 
 # minimum of 97164405, 97164301
 print(min(fl, cl))
