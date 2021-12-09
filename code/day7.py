@@ -4,7 +4,7 @@ import numpy as np
 # read input
 positions = np.array(list(map(int, open('../input/day7.txt').readline().split(','))))
 
-# E(|X-c|) = median
+# minimum E(|X-c| - |X|) = median
 # get sum of required fuel to get to position = sum of absolute deviations from the median
 print(sum(np.abs(positions-int(np.median(positions)))))
 

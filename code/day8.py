@@ -1,5 +1,4 @@
 # aoc 2021 day 8 part 1
-import numpy as np
 
 # read input
 inp = open('../input/day8.txt').read().splitlines()
@@ -23,13 +22,13 @@ def get_output(pattern, output):
     eight = "abcdefg"
     # the only character with 6 segments that contains four is nine
     nine = next(filter(lambda a: all(c in a for c in four) and len(a) == 6, pattern))
-    # the only character with 6 segments that contains one is zero
+    # the only other character with 6 segments that contains one is zero
     zero = next(filter(lambda a: a != nine and all(c in a for c in one) and len(a) == 6, pattern))
     # the only other character with 6 segments is six
     six = next(filter(lambda a: a not in (zero, nine) and len(a) == 6, pattern))
     # the only character with 5 segments that contains one is three
     three = next(filter(lambda a: all(c in a for c in one) and len(a) == 5, pattern))
-    # the only character with 5 segments that is contained in nine and not three is five
+    # the only character with 5 segments that is not three and contained in nine is five
     five = next(filter(lambda a: a != three and all(c in nine for c in a) and len(a) == 5,  pattern))
     # the only remaining character with five segments is two
     two = next(filter(lambda a: a not in (three, five) and len(a) == 5, pattern))
@@ -39,7 +38,7 @@ def get_output(pattern, output):
     # sort all elements in the output alphabetically
     # get the numeric string for each segment string in the output
     # cast to int and return
-    return int(''.join([segments_num[num] for num in [''.join(sorted(p)) for p in output]]))
+    return int(''.join(segments_num[num] for num in [''.join(sorted(p)) for p in output]))
 
 
 # get sum of outputs
