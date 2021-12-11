@@ -1,0 +1,1 @@
+# aoc 2021 day 12 part 1
