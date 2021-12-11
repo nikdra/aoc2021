@@ -13,7 +13,8 @@ def simulate(fishes, steps):
         reproduction_groups[f] += 1
     for i in range(steps):
         # only one of the age groups will reproduce offspring
-        # it will be offspring that is 8 days away from reproducing
+        # it will be offspring that is 9 days away from reproducing - one cycle away
+        # however, they themselves will reproduce in 7 days - add them to that group
         # this is basically a ringbuffer operation
         reproduction_groups[(i + 7) % 9] += reproduction_groups[i % 9]
     return sum(reproduction_groups)
