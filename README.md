@@ -1,7 +1,7 @@
 # aoc2021
 My attempts at solutions to advent of code 2021
 
-Here is a summary of the outputs produced together with the runtime:
+Here is a summary of the outputs produced together with the runtime (using Measure-Command on Windows):
 
 | Day | Part 1 solution | Part 2 solution | Runtime |
 |-----|-----------------|-----------------|---------|
@@ -16,7 +16,7 @@ Here is a summary of the outputs produced together with the runtime:
 | 9   | 554             | 1017792         | 62ms    |
 | 10  | 392139          | 4001832844      | 37ms    |
 | 11  | 1721            | 298             | 62ms    |
-| 12  | somenum         | somenum         | 30ms    |
+| 12  | 3298            | 93572           | 1500ms  |
 | 13  | somenum         | somenum         | 30ms    |
 | 14  | somenum         | somenum         | 30ms    |
 | 15  | somenum         | somenum         | 30ms    |
@@ -31,7 +31,13 @@ Here is a summary of the outputs produced together with the runtime:
 | 24  | somenum         | somenum         | 30ms    |
 | 25  | somenum         | somenum         | 30ms    |
 
-
+PC information:
+* OS: Windows 10
+* CPU: AMD Ryzen 5 3600 (6 cores, 12 threads, 3.6 GHz)
+* CPU cooler: be quiet! Dark Rock Pro 4
+* Motherboard: msi B550-A PRO
+* RAM: 4x8 GB G.Skill RipJaws V DDR4-3200 CL16
+* Storage: Samsung EVO 860 m.2 500GB
 
  
 
