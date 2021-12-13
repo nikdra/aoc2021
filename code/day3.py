@@ -1,4 +1,4 @@
-# aoc day 3 part 1
+# aoc 2021 day 3 part 1
 
 # read input
 report = [[int(c) for c in x] for x in open('../input/day3.txt').read().splitlines()]

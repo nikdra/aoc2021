@@ -3,12 +3,12 @@
 # read input
 inp = open('../input/day13.txt').read().splitlines()
 
-# store (x,y) points in a set
+# store (x,y) points in a set so that double points after folding are eliminated
 points = set()
 points.update(tuple(map(int, line.split(','))) for line in inp if 'fold' not in line and line != '')
 
-# store instructions (axis, line) in a list
-instructions = list(map(lambda a: (a[0], int(a[1])), [line[11:].split('=') for line in inp if 'fold' in line]))
+# create instructions (axis, line) generator
+instructions = map(lambda a: (a[0], int(a[1])), [line[11:].split('=') for line in inp if 'fold' in line])
 
 
 # fold the paper according to the instruction
@@ -25,13 +25,13 @@ def fold_paper(pts, inst):
 
 
 # fold once
-fold_paper(points, instructions[0])
+fold_paper(points, next(instructions))
 # part 1 answer - number of points
 print(len(points))
 
 # part 2
 # continue folding
-for instruction in instructions[1:]:
+for instruction in instructions:
     fold_paper(points, instruction)
 
 # get max coordinate for final grid
@@ -39,4 +39,4 @@ xmax = max(map(lambda a: a[0], points))
 ymax = max(map(lambda a: a[1], points))
 
 # print grid string from points
-print('\n'.join([''.join(['#' if (i, j) in points else ' ' for i in range(xmax+1)]) for j in range(ymax+1)]))
+print('\n'.join([''.join(['██' if (i, j) in points else '░░' for i in range(xmax+1)]) for j in range(ymax+1)]))

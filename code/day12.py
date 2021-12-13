@@ -1,6 +1,6 @@
 # aoc 2021 day 12 part 1
 # read input
-inp = [[a for a in line.split('-')] for line in open('../input/day12.txt').read().splitlines()]
+inp = [line.split('-') for line in open('../input/day12.txt').read().splitlines()]
 
 
 # basically DFS

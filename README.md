@@ -1,5 +1,6 @@
 # aoc2021
-My attempts at solutions to advent of code 2021
+My attempts at solutions to advent of code 2021. You can run each solution by changing into the `code` directory and
+running the python file for each day using `python day<num>.py`
 
 Here is a summary of the outputs produced together with the runtime (using Measure-Command on Windows):
 
@@ -18,27 +19,21 @@ Here is a summary of the outputs produced together with the runtime (using Measu
 | 11  | 1721            | 298             | 62ms    |
 | 12  | 3298            | 93572           | 1500ms  |
 | 13  | 638             | CJCKBAPB        | 35ms    |
-| 14  | somenum         | somenum         | 30ms    |
-| 15  | somenum         | somenum         | 30ms    |
-| 16  | somenum         | somenum         | 30ms    |
-| 17  | somenum         | somenum         | 30ms    |
-| 18  | somenum         | somenum         | 30ms    |
-| 19  | somenum         | somenum         | 30ms    |
-| 20  | somenum         | somenum         | 30ms    |
-| 21  | somenum         | somenum         | 30ms    |
-| 22  | somenum         | somenum         | 30ms    |
-| 23  | somenum         | somenum         | 30ms    |
-| 24  | somenum         | somenum         | 30ms    |
-| 25  | somenum         | somenum         | 30ms    |
+| 14  |                 |                 | 30ms    |
+| 15  |                 |                 | 30ms    |
+| 16  |                 |                 | 30ms    |
+| 17  |                 |                 | 30ms    |
+| 18  |                 |                 | 30ms    |
+| 19  |                 |                 | 30ms    |
+| 20  |                 |                 | 30ms    |
+| 21  |                 |                 | 30ms    |
+| 22  |                 |                 | 30ms    |
+| 23  |                 |                 | 30ms    |
+| 24  |                 |                 | 30ms    |
+| 25  |                 |                 | 30ms    |
 
 PC information:
 * OS: Windows 10
 * CPU: AMD Ryzen 5 3600 (6 cores, 12 threads, 3.6 GHz)
-* CPU cooler: be quiet! Dark Rock Pro 4
-* Motherboard: msi B550-A PRO
 * RAM: 4x8 GB G.Skill RipJaws V DDR4-3200 CL16
 * Storage: Samsung EVO 860 m.2 500GB
-
- 
-
-
