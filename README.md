@@ -19,7 +19,7 @@ Here is a summary of the outputs produced together with the runtime (using Measu
 | 11  | 1721            | 298             | 62ms    |
 | 12  | 3298            | 93572           | 1500ms  |
 | 13  | 638             | CJCKBAPB        | 35ms    |
-| 14  |                 |                 | 30ms    |
+| 14  | 2223            | 2566282754493   | 40ms    |
 | 15  |                 |                 | 30ms    |
 | 16  |                 |                 | 30ms    |
 | 17  |                 |                 | 30ms    |
