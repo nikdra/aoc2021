@@ -17,7 +17,7 @@ def steps(poly, r, k):
     # get the pairs in the polymer as a dict with the number of times they occur
     pairs = Counter([poly[i:i+2] for i in range(len(poly)-1)])
     # count the number of times a character occurs in the template
-    counts = Counter(template)
+    counts = Counter(poly)
     for _ in range(k):  # for k steps
         new_pairs = dict()  # create a new dict for the pairs created by this step
         for p in pairs:  # for each distinct pair

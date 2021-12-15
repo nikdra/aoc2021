@@ -1,6 +1,6 @@
 # aoc2021
 My attempts at solutions to advent of code 2021. You can run each solution by changing into the `code` directory and
-running the python file for each day using `python day<num>.py`
+running the python file for each day using `python day<num>.py` or `pypy3 day<num>.py`.
 
 Here is a summary of the outputs produced together with the runtime (using Measure-Command on Windows):
 
@@ -20,7 +20,7 @@ Here is a summary of the outputs produced together with the runtime (using Measu
 | 12  | 3298            | 93572           | 1500ms  |
 | 13  | 638             | CJCKBAPB        | 35ms    |
 | 14  | 2223            | 2566282754493   | 40ms    |
-| 15  |                 |                 | 30ms    |
+| 15  | 390             | 2814            | 4700ms  |
 | 16  |                 |                 | 30ms    |
 | 17  |                 |                 | 30ms    |
 | 18  |                 |                 | 30ms    |
