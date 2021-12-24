@@ -8,7 +8,6 @@ def neighborhood(x, y, dic, rnd, inst):
         alternate_value = '.'
     else:
         alternate_value = '#' if (rnd % 2) == 1 else '.'
-
     return (((x+i, y+j), '1' if dic.get((x+i, y+j), alternate_value) == '#' else '0')
             for i in range(-1, 2) for j in range(-1, 2))
 
@@ -40,13 +39,13 @@ def enhance(pixels, enh, rounds):
                        for j in range(y_bounds[0], y_bounds[1]))
         for pixel in pixel_stack:
             # get neighbor values as 0, 1 by row, column
-            ns = list(neighborhood(*pixel, old_values, r, enh))
+            ns = neighborhood(*pixel, old_values, r, enh)
             # get the index we have to query in the algorithm string
             enh_value = enh[int(''.join(n[1] for n in ns), 2)]
             # store updated value
             new_values[pixel] = enh_value
         # carry over the updated values
-        old_values = new_values.copy()
+        old_values = new_values
 
     # return enhanced image
     return old_values

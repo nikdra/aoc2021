@@ -4,7 +4,7 @@ from itertools import product
 from collections import deque
 
 # read input
-inp = ''.join(open('../input/day19.txt').readlines())
+inp = ''.join(open('../input/day19_test.txt').readlines())
 
 # get the beacon positions for each scanner in a matrix/numpy array
 scanners = [np.array([list(map(int, p.split(','))) for p in l.split('\n')[1:]]) for l in inp.split('\n\n')]
@@ -54,18 +54,18 @@ print(len(pairs), " distinct pairs to check")
 
 while len(pairs) > 0:  # while there is something to check
     (sj, sk) = pairs.pop()
-    print("checking ", sj, sk)
     if sj in scanner_positions and sk in scanner_positions:
-        print("solved pair: ", (sj, sk))
+        print("solved pair: ", sj, sk)
         continue  # this is a solved pair
     if sj not in scanner_positions and sk not in scanner_positions:
-        print("not yet solvable: ", (sj, sk))
+        print("not yet solvable: ", sj, sk)
         pairs.appendleft((sj, sk))  # put on end of queue
         continue
     if sj not in scanner_positions:  # sj = known scanner, sk = unknown scanner
         temp = sk
         sk = sj
         sj = temp
+    print("checking ", sj, sk)
     found = False  # variable to break out of rotation - translation brute force
     for rot in matrices:  # for each of the 24 possible rotations
         rotated_beacons = scanners[sk].dot(rot)  # rotate the coordinates of the new beacon
@@ -87,7 +87,7 @@ while len(pairs) > 0:  # while there is something to check
         if found:
             break  # break out, no unnecessary calculations
     if not found:
-        print("No match found for", (sj, sk))
+        print("No match found for", sj, sk)
         pairs.appendleft((sj, sk))
 
 # now that we have all the beacons in our normalized coordinate system, we can count how many unique ones there are

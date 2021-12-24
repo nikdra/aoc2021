@@ -17,9 +17,8 @@ def explore(caves, path):
 
 print(explore(inp, ['start']))
 
+
 # part 2
-
-
 # variation of the above function
 def explore_further(caves, path):
     # get all possible next caves (big or small)
